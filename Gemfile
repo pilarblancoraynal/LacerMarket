@@ -26,7 +26,7 @@ gem 'autoprefixer-rails', '8.6.5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'materialize-sass', '~> 1.0.0'
+gem 'materialize-sass'
 
 group :development, :test do
   
