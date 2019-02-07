@@ -41,6 +41,8 @@ GEM
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
+    autoprefixer-rails (8.6.5)
+      execjs
     bindex (0.5.0)
     builder (3.2.3)
     byebug (10.0.2)
@@ -59,7 +61,7 @@ GEM
     coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.12.2)
+    coffee-script-source (1.8.0)
     concurrent-ruby (1.1.4)
     crass (1.0.4)
     erubi (1.8.0)
@@ -77,6 +79,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    materialize-sass (1.0.0)
+      autoprefixer-rails (>= 6.0.3)
     method_source (0.9.2)
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
@@ -167,10 +171,13 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  autoprefixer-rails (= 8.6.5)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  coffee-script-source (= 1.8.0)
   jbuilder (~> 2.5)
+  materialize-sass (~> 1.0.0)
   puma (~> 3.7)
   rails (~> 5.1.6, >= 5.1.6.1)
   sass-rails (~> 5.0)
