@@ -177,7 +177,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   coffee-script-source (= 1.8.0)
   jbuilder (~> 2.5)
-  materialize-sass (~> 1.0.0)
+  materialize-sass
   puma (~> 3.7)
   rails (~> 5.1.6, >= 5.1.6.1)
   sass-rails (~> 5.0)
