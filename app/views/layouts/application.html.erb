@@ -3,7 +3,7 @@
   <head>
       <title>LacerMarket</title>
       <%= csrf_meta_tags %>
-
+http://localhost:3000/#
      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -25,8 +25,12 @@
       
   </body>
 
-    <script >
-     $(".button-collapse").sideNav();
-    </script>
+      <script >
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(elems, options);
+          });
+      </script>
+   
 
 </html>
