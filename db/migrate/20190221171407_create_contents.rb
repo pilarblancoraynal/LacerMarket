@@ -2,7 +2,8 @@ class CreateContents < ActiveRecord::Migration[5.1]
   def change
     create_table :contents do |t|
       t.string :titolo
-      t.string :descrizione
+      t.text :descrizione
+      t.decimal :price
 
       t.timestamps
     end
