@@ -16,8 +16,7 @@
 //
 //= require rails-ujs
 
-//= require jquery2
-//= require jquery_ujs
+//= require jquery
 
 
 //= require_tree .

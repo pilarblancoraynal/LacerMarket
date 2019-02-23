@@ -1,5 +1,7 @@
 class ContentsController < ApplicationController
   before_action :set_content, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :check_user, only: [:edit, :update, :destroy]
 
 
   def index
@@ -11,7 +13,7 @@ class ContentsController < ApplicationController
   end
 
   def new
-    @content = Content.new
+    @content = current_user.contents.build
   end
 
 
@@ -19,7 +21,7 @@ class ContentsController < ApplicationController
   end
 
   def create
-    @content = Content.new(content_params)
+    @content = current_user.contents.build(content_params)
 
     respond_to do |format|
       if @content.save
@@ -58,4 +60,10 @@ class ContentsController < ApplicationController
     def content_params
       params.require(:content).permit(:titolo, :descrizione, :price)
     end
+
+    def check_user
+      if current_user != @content.user
+        redirect_to root_url, alert: "Scusa, non hai accesso a questa pagina"
+      end
+    end      
 end
