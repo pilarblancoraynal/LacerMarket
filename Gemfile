@@ -23,7 +23,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 
 gem 'autoprefixer-rails', '8.6.5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+
 gem 'jbuilder', '~> 2.5'
 
 gem 'materialize-sass'
@@ -53,3 +53,5 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-materialize', git: 'https://github.com/mldoscar/will_paginate-materialize', branch: 'master'
 
 gem 'jquery-rails'
+
+gem 'friendly_id', '~> 5.2.4'
