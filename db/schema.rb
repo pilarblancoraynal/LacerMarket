@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190307140442) do
+ActiveRecord::Schema.define(version: 20190307142932) do
 
   create_table "contents", force: :cascade do |t|
     t.string "titolo"
@@ -44,6 +44,15 @@ ActiveRecord::Schema.define(version: 20190307140442) do
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.string "email_acquirente"
+    t.string "email_venditore"
+    t.string "guid"
+    t.integer "content_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

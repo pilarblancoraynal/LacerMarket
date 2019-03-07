@@ -55,3 +55,5 @@ gem 'will_paginate-materialize', git: 'https://github.com/mldoscar/will_paginate
 gem 'jquery-rails'
 
 gem 'friendly_id', '~> 5.2.4'
+
+gem 'dotenv-rails', groups: [:development, :test]
