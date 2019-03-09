@@ -8,7 +8,7 @@ class TransactionsController < ApplicationController
 
 			charge = Stripe::Charge.create({
 	    	card: token,
-	    	amount: content.price,
+	    	amount: (content.price * 100).floor,
 	    	description: current_user.email,
 	    	currency: 'eur',
 	 		 })	
