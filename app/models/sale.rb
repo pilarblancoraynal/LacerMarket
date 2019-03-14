@@ -7,21 +7,39 @@ class Sale < ApplicationRecord
 
 	 aasm column:'state'  do
 	 	state :sleeping, initial: true
-    	state :running, 
-    	state :completed,
+    	state :running
+    	state :completed
     	state :errored
 
     	event :running,after: :charge_card do
-    		transition from :sleeping, to: :running
+    		transitions from: :sleeping, to: :running
 		end
 	 	event :complete do
-	 		transition from :running, to: :completed
+	 		transitions from: :running, to: :completed
 		end
-	 	event :error do
-	 		transitions from :completed, to: :errored
+	 	event :fail do
+	 		transitions from: :running, to: :errored
 	 	end
+
 	 end
 
+	 def charge_card
+	 	begin
+	 		save!
+	 		charge = Stripe::Charge.create(
+	 			amount: self.amount,
+	 			currency: "eur",
+	 			card: self.stripe_token,
+	 			description: "vendita di un contenuto"
+	 			)
+	 			self.update(stripe_id: charge.id)
+	 			self.complete!
+
+	 	rescue Stripe::StripeError => e
+	 		self.update_attributes(error: e.message)
+	 		self.fail!
+	 	end
+	end
 
 	private
 
