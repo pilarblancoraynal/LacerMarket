@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '5.1.6.1'
+ruby ' 2.3.3'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -9,7 +9,7 @@ end
 
 
 
-gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
+gem 'rails'
 
 
 
