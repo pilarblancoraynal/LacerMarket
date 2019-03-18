@@ -9,7 +9,7 @@ end
 
 gem 'rails', '~> 5.1.6', '>= 5.1.6.1'
 
-gem 'sqlite3'
+
 
 gem 'puma', '~> 3.7'
 
@@ -31,9 +31,16 @@ gem 'materialize-sass'
 group :development, :test do
   
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem 'sqlite3'
   
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+end
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
 end
 
 group :development do
