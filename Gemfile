@@ -73,4 +73,6 @@ gem 'stripe'
 
 gem 'aasm'
 
+gem 'font-awesome-sass', '~> 5.6.1'
+
 

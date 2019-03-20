@@ -1,4 +1,6 @@
 @import "materialize";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 body {
     display: flex;
@@ -46,4 +48,14 @@ body {
 
   .card-image {
     height: 150px;
+  }
+
+  .fa-social {
+    padding: 0 2%;
+  }
+
+  @media (max-width: 600px) {
+    .fa-social {
+      padding: 0 10%;
+    }
   }
