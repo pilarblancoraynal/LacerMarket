@@ -21,6 +21,7 @@ http://localhost:3000/#
         <% end %>
       </div>
 
+      <%= render "pages/slider" %>
 
        <main class="container">
            <%= yield %>
@@ -35,7 +36,11 @@ http://localhost:3000/#
           var elems = document.querySelectorAll('.sidenav');
           var instances = M.Sidenav.init(elems, options);
           });
+
+        $(document).ready(function(){
+        $('.parallax').parallax();
+          });
+        
       </script>
-   
 
 </html>
