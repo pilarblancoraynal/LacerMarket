@@ -17,3 +17,7 @@
 //= require materialize
 //= require materialize-sprockets
 //= require_tree
+
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
