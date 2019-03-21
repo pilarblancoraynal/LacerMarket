@@ -55,7 +55,7 @@ gem 'devise'
 
 gem "paperclip", "~> 6.0.0"
 
-gem 'aws-sdk-s3'
+gem gem "aws-sdk-s3", "~> 1.2", require: false
 
 gem 'will_paginate', '~> 3.1.0'
 
