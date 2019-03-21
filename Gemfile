@@ -57,7 +57,7 @@ gem 'devise'
 
 gem "paperclip", "~> 6.0.0"
 
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk', '~> 2.0'
 
 gem 'will_paginate', '~> 3.1.0'
 
