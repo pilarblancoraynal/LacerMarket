@@ -32,6 +32,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+ gem 'dotenv-rails', groups: [:development, :test]
 end
 
 group :production do
@@ -61,7 +62,7 @@ gem 'jquery-rails'
 
 gem 'friendly_id', '~> 5.2.4'
 
-gem 'dotenv-rails', groups: [:development, :test]
+
 
 gem 'stripe'
 
