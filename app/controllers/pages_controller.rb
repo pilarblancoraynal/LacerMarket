@@ -1,8 +1,14 @@
 class PagesController < ApplicationController
-  def home
-  end
-  
-  def about
-  end
+	before_action :authenticate_user!, only: [:dashboard]
+	def home
+	end
 
-end
+	def about
+	end
+
+	def dashboard
+		@content = current_user.contents
+		@sales = Sale.where(email_venditore: current_user.email)
+	end
+
+end	
