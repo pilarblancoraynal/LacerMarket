@@ -33,11 +33,27 @@ http://localhost:3000/#
       
   </body>
 
+      <script>
+        $(document).ready(function(){
+        $('.sidenav').sidenav();
+         });
+      </script>
+
+
+      <script>
+        $(document).ready(function(){
+        $('.parallax').parallax();
+        });
+      </script>
+
+      <script>
+        $(document).ready(function(){
+        $('.tabs').tabs();
+        });
+      </script>
+
       <script >
-        document.addEventListener('DOMContentLoaded', function() {
-          var elems = document.querySelectorAll('.sidenav');
-          var instances = M.Sidenav.init(elems, options);
-          });
+        $('.dropdown-trigger').dropdown();
       </script>
 
 </html>

@@ -18,10 +18,12 @@
 //= require materialize-sprockets
 //= require_tree
 
-$(document).ready(function(){
-  $('.parallax').parallax();
-});
 
- $(document).ready(function(){
-    $('.tabs').tabs();
-  });
+
+
+ 
+
+  
+
+
+        
