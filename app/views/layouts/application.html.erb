@@ -35,7 +35,7 @@ http://localhost:3000/#
 
       <script>
         $(document).ready(function(){
-        $('.sidenav').sidenav();
+        $(".button-collapse").sidenav();
          });
       </script>
 
@@ -48,12 +48,14 @@ http://localhost:3000/#
 
       <script>
         $(document).ready(function(){
-        $('.tabs').tabs();
+        $('ul.tabs').tabs();
         });
       </script>
 
       <script >
-        $('.dropdown-trigger').dropdown();
+        $(document).ready(function(){
+        $(".dropdown-button").dropdown();
+        });
       </script>
 
 </html>
