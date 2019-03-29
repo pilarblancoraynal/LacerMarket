@@ -97,8 +97,7 @@ config.paperclip_defaults = {
       secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
       s3_region: ENV.fetch('AWS_REGION'),
     },
-    :s3_host_name => "s3-us-east-2.amazonaws.com", # Added entry
-    :url => ":s3_host_name"                        # Added entry
+    config.paperclip_defaults = { s3_host_name: "s3-#{ENV['AWS_REGION']}.amazonaws.com", }
   }
 
 end
