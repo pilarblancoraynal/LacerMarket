@@ -9,7 +9,7 @@ end
 
 gem 'rails'
 
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 
 gem 'sass-rails', '~> 5.0'
 
